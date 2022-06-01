@@ -23,4 +23,10 @@
   height: 5rem;
   background-color: white;
   border-radius: 50%;
+}
+.cells-container__cell--red {
+  background-color: red;
+}
+.cells-container__cell--yellow {
+  background-color: yellow;
 }/*# sourceMappingURL=style.css.map */
