@@ -15,15 +15,12 @@
   background-color: #2e57d0;
   display: grid;
   grid-template-columns: repeat(7, 1fr);
-
   gap: 0.5rem;
   padding: 1em;
-
-  &__cell {
-    width: 5rem;
-    height: 5rem;
-
-    background-color: white;
-    border-radius: 50%;
-  }
 }
+.cells-container__cell {
+  width: 5rem;
+  height: 5rem;
+  background-color: white;
+  border-radius: 50%;
+}/*# sourceMappingURL=style.css.map */
