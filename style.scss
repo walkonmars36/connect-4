@@ -5,32 +5,35 @@
 }
 
 .container {
-  display: flex;
+  // display: flex;
+  border: 5px solid;
+  // justify-content: center;
+  // width: min-content;
   width: 90%;
   max-width: 45rem;
-  margin: 0 auto;
 }
 
-.cells-container {
+.div-container {
+  // margin: 0 auto;
+  // max-width: 45rem;
   background-color: #2e57d0;
   display: grid;
   grid-template-columns: repeat(7, 1fr);
-
   gap: 0.5rem;
   padding: 1em;
 
-  &__cell {
+  &__disc {
     width: 5rem;
     height: 5rem;
 
     background-color: white;
     border-radius: 50%;
 
-    &--red {
+    &--player-1 {
       background-color: red;
     }
 
-    &--yellow {
+    &--player-2 {
       background-color: yellow;
     }
   }

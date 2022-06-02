@@ -5,28 +5,27 @@
 }
 
 .container {
-  display: flex;
+  border: 5px solid;
   width: 90%;
   max-width: 45rem;
-  margin: 0 auto;
 }
 
-.cells-container {
+.div-container {
   background-color: #2e57d0;
   display: grid;
   grid-template-columns: repeat(7, 1fr);
   gap: 0.5rem;
   padding: 1em;
 }
-.cells-container__cell {
+.div-container__disc {
   width: 5rem;
   height: 5rem;
   background-color: white;
   border-radius: 50%;
 }
-.cells-container__cell--red {
+.div-container__disc--player-1 {
   background-color: red;
 }
-.cells-container__cell--yellow {
+.div-container__disc--player-2 {
   background-color: yellow;
 }/*# sourceMappingURL=style.css.map */
