@@ -4,29 +4,24 @@
   margin: 0;
 }
 
-.container {
-  // display: flex;
-  border: 5px solid;
-  // justify-content: center;
-  // width: min-content;
-  width: 90%;
-  max-width: 45rem;
-}
-
 .div-container {
-  // margin: 0 auto;
-  // max-width: 45rem;
+  border: 5px solid;
+  // width: 100%;
+  max-width: 45rem;
   background-color: #2e57d0;
   display: grid;
   grid-template-columns: repeat(7, 1fr);
+  justify-items: center;
+  margin: auto;
   gap: 0.5rem;
   padding: 1em;
 
-  &__disc {
+  &__cell {
     width: 5rem;
     height: 5rem;
 
     background-color: white;
+    border: 5px solid #223f97;
     border-radius: 50%;
 
     &--player-1 {
@@ -36,5 +31,20 @@
     &--player-2 {
       background-color: yellow;
     }
+  }
+}
+
+.result {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 3rem;
+}
+
+.play-again {
+  text-align: center;
+
+  &__button {
+    padding: 1.5em 3em;
   }
 }
