@@ -9,9 +9,20 @@
     <title>Connect 4</title>
   </head>
   <body>
-    <div class="div-container"></div>
-    <h2 class="result"></h2>
-    <div class="play-again"><button class="play-again__button">PLAY AGAIN</button></div>
+    <div class="page-container">
+      <div class="alert">
+        <p class="alert__text">You can't build on an empty space or on a space that has been built on</p>
+        <button class="alert__button">OK</button>
+      </div>
+
+      <div class="div-container"></div>
+
+      <div class="result">
+        <h1 class="result__game-over">Game Over</h1>
+        <h2 class="result__winner"></h2>
+        <button class="result__play-again">Play Again</button>
+      </div>
+    </div>
 
     <script src="./main.js" type="module"></script>
   </body>

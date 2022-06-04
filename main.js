@@ -3,8 +3,8 @@ import {winningArray} from "./winningArray.js";
 // GET THE CELLS CONTAINER
 const divContainer = document.querySelector(".div-container");
 const result = document.querySelector(".result");
-
-const playAgainBtn = document.querySelector(".play-again");
+const resultWinner = document.querySelector(".result__winner");
+const playAgainBtn = document.querySelector(".result__play-again");
 
 // STARTING PLAYER
 let currentPlayer = 1;
@@ -15,6 +15,7 @@ const loadPage = () => {
 
 const playAgain = () => {
   divContainer.innerHTML = "";
+  result.style.display = "none";
   loadPage();
 };
 
@@ -77,7 +78,9 @@ const checkForWin = () => {
       token3.classList.contains("div-container__cell--player-1") &&
       token4.classList.contains("div-container__cell--player-1")
     ) {
-      result.innerText = "Player 1 Wins";
+      result.style.display = "flex";
+      resultWinner.innerText = "Red Wins";
+      playAgainBtn.innerText = "PLAY AGAIN";
     }
     if (
       token1.classList.contains("div-container__cell--player-2") &&
@@ -85,7 +88,9 @@ const checkForWin = () => {
       token3.classList.contains("div-container__cell--player-2") &&
       token4.classList.contains("div-container__cell--player-2")
     ) {
-      result.innerHTML = "<p>Player 2 Wins</p>";
+      result.style.display = "flex";
+      resultWinner.innerText = "Yellow Wins";
+      playAgainBtn.innerText = "PLAY AGAIN";
     }
   }
 };

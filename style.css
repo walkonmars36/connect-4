@@ -1,12 +1,24 @@
+@import url("https://fonts.googleapis.com/css2?family=Luckiest+Guy&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&display=swap");
 * {
   box-sizing: border-box;
   padding: 0;
   margin: 0;
 }
 
+button {
+  border: none;
+  background-color: transparent;
+  font-family: inherit;
+  cursor: pointer;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+}
+
 .div-container {
   border: 5px solid;
-  max-width: 45rem;
   background-color: #2e57d0;
   display: grid;
   grid-template-columns: repeat(7, 1fr);
@@ -29,16 +41,78 @@
   background-color: yellow;
 }
 
-.result {
+.page-container {
+  position: relative;
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-top: 3rem;
+  margin: 3rem auto;
+  width: 90%;
 }
 
-.play-again {
-  text-align: center;
+.alert {
+  display: flex;
+  flex-direction: row;
+  position: absolute;
+  background-color: white;
+  border: 1px solid #223f97;
+  justify-content: center;
+  align-items: center;
+  top: 25%;
+  right: 10%;
+  left: 10%;
+  bottom: 60%;
+  padding: 3em;
+  box-shadow: 0px 2px 5px 5px rgba(0, 0, 0, 0.75);
 }
-.play-again__button {
-  padding: 1.5em 3em;
+.alert:hover {
+  box-shadow: 0px 2px 5px 5px rgba(0, 0, 0, 0.2);
+}
+.alert__button {
+  background-color: #223f97;
+  color: white;
+  padding: 1em 2em;
+  border: 1px solid #223f97;
+  border-radius: 10px;
+}
+.alert__button:hover {
+  color: #223f97;
+  background-color: white;
+}
+
+.result {
+  background: rgba(255, 255, 255, 0.8);
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.result__winner {
+  font-family: "Roboto", sans-serif;
+  font-weight: 900;
+  font-size: 3rem;
+  color: rgb(222, 8, 8);
+  margin-top: 2rem;
+  padding: 1em 2em;
+}
+.result__play-again {
+  font-family: "Roboto", sans-serif;
+  font-weight: 700;
+  font-size: 1.5rem;
+  border-radius: 10px;
+  margin-top: 2rem;
+  padding: 1em 2em;
+  background-color: #223f97;
+  color: white;
+}
+.result__game-over {
+  font-family: "Luckiest Guy", cursive;
+  letter-spacing: 5px;
+  font-size: 4.5rem;
+  color: rgb(222, 8, 8);
 }/*# sourceMappingURL=style.css.map */
