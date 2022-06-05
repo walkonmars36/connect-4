@@ -14,93 +14,82 @@ button {
 }
 
 body {
+  height: 100vh;
   font-family: "Roboto", sans-serif;
+  background-color: #274298;
+  background-image: linear-gradient(343deg, #274298 0%, #9bc1bc 73%, #ffffff 100%);
 }
 
-.game-container {
+.page-container {
   position: relative;
   display: flex;
   justify-content: center;
-  align-items: center;
+  align-items: flex-start;
   margin: auto;
-  width: 90vw;
+  width: 90%;
   height: 60vh;
-  max-width: 45rem;
+  max-width: 60rem;
 }
 
-.score {
-  display: flex;
-  justify-content: space-evenly;
-  align-items: center;
-  background-color: #2e57d0;
-  color: whitesmoke;
-  margin: 0 auto;
-  padding: 1em;
-  font-size: 1.5rem;
-  font-weight: 700;
-}
-.score__display {
-  padding: 0.5em 0;
-}
-
-.div-container {
+.game-container {
   border: 5px solid navy;
   background-color: #2e57d0;
   display: grid;
   grid-template-columns: repeat(7, 1fr);
   gap: 0.5rem;
   padding: 1em;
-  margin-top: 5rem;
+  margin-top: 3rem;
+  box-shadow: 0px 2px 10px 5px rgba(19, 35, 84, 0.5);
 }
-.div-container__cell {
+.game-container__cell {
   width: 3em;
   aspect-ratio: 1/1;
   background-color: white;
   border: 5px solid #223f97;
   border-radius: 50%;
 }
-.div-container__cell--player-red {
+.game-container__cell--player-red {
   background-color: red;
 }
-.div-container__cell--player-yellow {
+.game-container__cell--player-yellow {
   background-color: yellow;
 }
 
-.alert {
-  display: flex;
-  flex-direction: row;
+.alert-box {
+  display: none;
   position: absolute;
   background-color: white;
   border: 1px solid #223f97;
   border-radius: 5px;
-  justify-content: center;
+  justify-content: space-around;
   align-items: center;
-  top: 40%;
+  top: 20%;
   right: 25%;
   left: 25%;
-  bottom: 40%;
-  padding: 2em;
+  bottom: 60%;
+  padding: 1em;
   box-shadow: 0px 2px 5px 3px rgba(34, 63, 151, 0.8);
 }
-.alert:hover {
+.alert-box:hover {
   box-shadow: 0px 2px 5px 5px rgba(34, 63, 151, 0.2);
 }
-.alert__button {
+.alert-box__button {
   background-color: #223f97;
   color: white;
   padding: 1em 2em;
   border: 1px solid #223f97;
   border-radius: 10px;
 }
-.alert__button:hover {
+.alert-box__button:hover {
   color: #223f97;
   background-color: white;
 }
 
 .result {
-  background: rgba(34, 63, 151, 0.9);
+  background: rgba(34, 63, 151, 0.98);
+  border-radius: 10px;
   position: absolute;
-  top: 5rem;
+  top: 0;
   right: 0;
   bottom: 0;
   left: 0;
@@ -124,7 +113,7 @@ body {
   font-size: 1.25rem;
   border-radius: 10px;
   margin-top: 2rem;
-  padding: 1em 3em;
+  padding: 1em 2em;
   background-color: #223f97;
   border: 1px solid white;
   color: white;
@@ -137,6 +126,28 @@ body {
 .result__game-over {
   font-family: "Luckiest Guy", cursive;
   letter-spacing: 5px;
-  font-size: 3rem;
+  font-size: 4rem;
   color: whitesmoke;
+}
+
+.score {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  background-color: rgba(34, 63, 151, 0.98);
+  color: whitesmoke;
+  margin: 0 auto;
+  padding: 2em;
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+.score__display {
+  padding: 0.5em 0;
+}
+
+.current-player {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 3rem;
 }/*# sourceMappingURL=style.css.map */

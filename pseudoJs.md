@@ -1,7 +1,5 @@
 create 42 divs with class of cell using createElement() and append to container div, with appendChild() each will need an id or data value
 
-store cell as a variable and create an array using Array.from()
-
 attach a click event listener to each cell, triggering a cellClicked function -> check for click in mid air as cells can only be built on the foundation level or on top of other cells
 How to allow placement of disc on foundation row? ->
 

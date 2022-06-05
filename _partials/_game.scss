@@ -1,11 +1,12 @@
-.div-container {
+.game-container {
   border: 5px solid navy;
   background-color: #2e57d0;
   display: grid;
   grid-template-columns: repeat(7, 1fr);
   gap: 0.5rem;
   padding: 1em;
-  margin-top: 5rem;
+  margin-top: 3rem;
+  box-shadow: 0px 2px 10px 5px rgba($color: #132354, $alpha: 0.5);
 
   &__cell {
     width: 3em;

@@ -1,0 +1,22 @@
+.score {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  background-color: rgba($color: #223f97, $alpha: 0.98);
+  color: whitesmoke;
+  margin: 0 auto;
+  padding: 2em;
+  font-size: 1.5rem;
+  font-weight: 700;
+
+  &__display {
+    padding: 0.5em 0;
+  }
+}
+
+.current-player {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 3rem;
+}
