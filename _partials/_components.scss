@@ -1,0 +1,33 @@
+.alert {
+  display: none;
+  flex-direction: row;
+  position: absolute;
+  background-color: white;
+  border: 1px solid #223f97;
+  border-radius: 5px;
+  justify-content: center;
+  align-items: center;
+  top: 25%;
+  right: 10%;
+  left: 10%;
+  bottom: 60%;
+  padding: 3em;
+  box-shadow: 0px 2px 5px 3px rgba($color: #223f97, $alpha: 0.8);
+
+  &:hover {
+    box-shadow: 0px 2px 5px 5px rgba($color: #223f97, $alpha: 0.2);
+  }
+
+  &__button {
+    background-color: #223f97;
+    color: white;
+    padding: 1em 2em;
+    border: 1px solid #223f97;
+    border-radius: 10px;
+
+    &:hover {
+      color: #223f97;
+      background-color: white;
+    }
+  }
+}

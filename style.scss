@@ -2,79 +2,9 @@
 @use "./_partials/fonts" as *;
 @use "./_partials/base" as *;
 @use "./_partials/variables" as *;
-
-.div-container {
-  border: 5px solid navy;
-  background-color: #2e57d0;
-  display: grid;
-  grid-template-columns: repeat(7, 1fr);
-  justify-items: center;
-
-  // margin: 0 auto;
-  gap: 0.5rem;
-  padding: 1em;
-
-  &__cell {
-    width: 5rem;
-    height: 5rem;
-
-    background-color: white;
-    border: 5px solid #223f97;
-    border-radius: 50%;
-
-    &--player-red {
-      background-color: red;
-    }
-
-    &--player-yellow {
-      background-color: yellow;
-    }
-  }
-}
-
-.game-container {
-  height: 100vh;
-  position: relative;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin: 0 auto;
-  width: 90%;
-}
-
-.alert {
-  display: none;
-  flex-direction: row;
-  position: absolute;
-  background-color: white;
-  border: 1px solid #223f97;
-  border-radius: 5px;
-  justify-content: center;
-  align-items: center;
-  top: 25%;
-  right: 10%;
-  left: 10%;
-  bottom: 60%;
-  padding: 3em;
-  box-shadow: 0px 2px 5px 3px rgba($color: #223f97, $alpha: 0.8);
-
-  &:hover {
-    box-shadow: 0px 2px 5px 5px rgba($color: #223f97, $alpha: 0.2);
-  }
-
-  &__button {
-    background-color: #223f97;
-    color: white;
-    padding: 1em 2em;
-    border: 1px solid #223f97;
-    border-radius: 10px;
-
-    &:hover {
-      color: #223f97;
-      background-color: white;
-    }
-  }
-}
+@use "./_partials/layout" as *;
+@use "./_partials/game" as *;
+@use "./_partials/components" as *;
 
 .result {
   background: rgba($color: #223f97, $alpha: 0.9);
@@ -123,24 +53,5 @@
     letter-spacing: 5px;
     font-size: 4.5rem;
     color: whitesmoke;
-  }
-}
-
-.score {
-  display: flex;
-  // flex-direction: column;
-  justify-content: space-evenly;
-  align-items: center;
-  background-color: #2e57d0;
-  color: whitesmoke;
-  margin: 0 auto;
-  padding: 1em;
-  // border-radius: 10px;
-  // width: 50%;
-  font-size: 1.5rem;
-  font-weight: 700;
-
-  &__display {
-    padding: 0.5em 0;
   }
 }

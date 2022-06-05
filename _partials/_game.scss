@@ -1,0 +1,25 @@
+.div-container {
+  border: 5px solid navy;
+  background-color: #2e57d0;
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+
+  gap: 0.5rem;
+  padding: 1em;
+
+  &__cell {
+    width: 3em;
+    aspect-ratio: 1/1;
+    background-color: white;
+    border: 5px solid #223f97;
+    border-radius: 50%;
+
+    &--player-red {
+      background-color: red;
+    }
+
+    &--player-yellow {
+      background-color: yellow;
+    }
+  }
+}

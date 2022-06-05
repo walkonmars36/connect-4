@@ -17,18 +17,42 @@ body {
   font-family: "Roboto", sans-serif;
 }
 
+.game-container {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+  width: 90%;
+  max-width: 45rem;
+}
+
+.score {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  background-color: #2e57d0;
+  color: whitesmoke;
+  margin: 0 auto;
+  padding: 1em;
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+.score__display {
+  padding: 0.5em 0;
+}
+
 .div-container {
   border: 5px solid navy;
   background-color: #2e57d0;
   display: grid;
   grid-template-columns: repeat(7, 1fr);
-  justify-items: center;
   gap: 0.5rem;
   padding: 1em;
 }
 .div-container__cell {
-  width: 5rem;
-  height: 5rem;
+  width: 3em;
+  aspect-ratio: 1/1;
   background-color: white;
   border: 5px solid #223f97;
   border-radius: 50%;
@@ -38,16 +62,6 @@ body {
 }
 .div-container__cell--player-yellow {
   background-color: yellow;
-}
-
-.game-container {
-  height: 100vh;
-  position: relative;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin: 0 auto;
-  width: 90%;
 }
 
 .alert {
@@ -125,19 +139,4 @@ body {
   letter-spacing: 5px;
   font-size: 4.5rem;
   color: whitesmoke;
-}
-
-.score {
-  display: flex;
-  justify-content: space-evenly;
-  align-items: center;
-  background-color: #2e57d0;
-  color: whitesmoke;
-  margin: 0 auto;
-  padding: 1em;
-  font-size: 1.5rem;
-  font-weight: 700;
-}
-.score__display {
-  padding: 0.5em 0;
 }/*# sourceMappingURL=style.css.map */
