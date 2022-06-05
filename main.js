@@ -1,22 +1,32 @@
 import {winningArray} from "./winningArray.js";
 
-// GET THE CELLS CONTAINER
+// QUERY SELECTORS
 const divContainer = document.querySelector(".div-container");
 const result = document.querySelector(".result");
 const resultWinner = document.querySelector(".result__winner");
 const playAgainBtn = document.querySelector(".result__play-again");
+const alertMsg = document.querySelector(".alert");
+const alertText = document.querySelector(".alert__text");
+const alertBtn = document.querySelector(".alert__button");
+const scoreDiv = document.querySelector(".score");
+const scoreRed = document.querySelector(".score__display--red");
+const scoreYellow = document.querySelector(".score__display--yellow");
 
 // STARTING PLAYER
-let currentPlayer = 1;
+let currentPlayer = "red";
+let redScore = 0;
+let yellowScore = 0;
 
 const loadPage = () => {
   createGameBoard();
+  scoreDiv.style.display = "none";
 };
 
 const playAgain = () => {
   divContainer.innerHTML = "";
   result.style.display = "none";
-  loadPage();
+  scoreDiv.style.display = "flex";
+  createGameBoard();
 };
 
 // CREATE GAME
@@ -49,19 +59,20 @@ const cellClicked = (event) => {
   const cellID = parseInt(event.target.dataset.id);
 
   if (cells[cellID + 7].classList.contains("taken") && !cells[cellID].classList.contains("taken")) {
-    if (currentPlayer === 1) {
-      clickedCell.classList.add("div-container__cell--player-1");
+    if (currentPlayer === "red") {
+      clickedCell.classList.add("div-container__cell--player-red");
       clickedCell.classList.add("taken");
       checkForWin();
-      currentPlayer = 2;
-    } else if (currentPlayer === 2) {
-      clickedCell.classList.add("div-container__cell--player-2");
+      currentPlayer = "yellow";
+    } else if (currentPlayer === "yellow") {
+      clickedCell.classList.add("div-container__cell--player-yellow");
       clickedCell.classList.add("taken");
       checkForWin();
-      currentPlayer = 1;
+      currentPlayer = "red";
     }
   } else {
-    alert("You can't build on an empty space or on a space that has been built on");
+    alertMsg.style.display = "flex";
+    alertText.innerText = "You can't place a token on an empty cell or on a cell that has a token in it";
   }
 };
 
@@ -73,28 +84,42 @@ const checkForWin = () => {
     const token4 = cells[winningArray[i][3]];
 
     if (
-      token1.classList.contains("div-container__cell--player-1") &&
-      token2.classList.contains("div-container__cell--player-1") &&
-      token3.classList.contains("div-container__cell--player-1") &&
-      token4.classList.contains("div-container__cell--player-1")
+      token1.classList.contains("div-container__cell--player-red") &&
+      token2.classList.contains("div-container__cell--player-red") &&
+      token3.classList.contains("div-container__cell--player-red") &&
+      token4.classList.contains("div-container__cell--player-red")
     ) {
       result.style.display = "flex";
-      resultWinner.innerText = "Red Wins";
+      resultWinner.innerText = "Red Wins 🎉";
+      redScore++;
+      scoreRed.innerText = redScore;
+      scoreDiv.style.display = "none";
+      resultWinner.style.color = "red";
       playAgainBtn.innerText = "PLAY AGAIN";
     }
     if (
-      token1.classList.contains("div-container__cell--player-2") &&
-      token2.classList.contains("div-container__cell--player-2") &&
-      token3.classList.contains("div-container__cell--player-2") &&
-      token4.classList.contains("div-container__cell--player-2")
+      token1.classList.contains("div-container__cell--player-yellow") &&
+      token2.classList.contains("div-container__cell--player-yellow") &&
+      token3.classList.contains("div-container__cell--player-yellow") &&
+      token4.classList.contains("div-container__cell--player-yellow")
     ) {
       result.style.display = "flex";
-      resultWinner.innerText = "Yellow Wins";
+      resultWinner.innerText = "Yellow Wins 🎉";
+      yellowScore++;
+      scoreYellow.innerText = yellowScore;
+      scoreDiv.style.display = "none";
+      resultWinner.style.color = "yellow";
       playAgainBtn.innerText = "PLAY AGAIN";
     }
   }
 };
 
+const turnAlertOff = () => {
+  alertMsg.style.display = "none";
+};
+
 window.addEventListener("load", loadPage);
 
 playAgainBtn.addEventListener("click", playAgain);
+
+alertBtn.addEventListener("click", turnAlertOff);

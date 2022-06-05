@@ -1,5 +1,5 @@
-@use "./fonts" as *;
+@use "./variables" as *;
 
 body {
-  font-family: "Roboto", sans-serif;
+  font-family: $primary-font;
 }

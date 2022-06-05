@@ -18,12 +18,11 @@ body {
 }
 
 .div-container {
-  border: 5px solid;
+  border: 5px solid navy;
   background-color: #2e57d0;
   display: grid;
   grid-template-columns: repeat(7, 1fr);
   justify-items: center;
-  margin: auto;
   gap: 0.5rem;
   padding: 1em;
 }
@@ -34,28 +33,30 @@ body {
   border: 5px solid #223f97;
   border-radius: 50%;
 }
-.div-container__cell--player-1 {
+.div-container__cell--player-red {
   background-color: red;
 }
-.div-container__cell--player-2 {
+.div-container__cell--player-yellow {
   background-color: yellow;
 }
 
-.page-container {
+.game-container {
+  height: 100vh;
   position: relative;
   display: flex;
   justify-content: center;
   align-items: center;
-  margin: 3rem auto;
+  margin: 0 auto;
   width: 90%;
 }
 
 .alert {
-  display: flex;
+  display: none;
   flex-direction: row;
   position: absolute;
   background-color: white;
   border: 1px solid #223f97;
+  border-radius: 5px;
   justify-content: center;
   align-items: center;
   top: 25%;
@@ -63,10 +64,10 @@ body {
   left: 10%;
   bottom: 60%;
   padding: 3em;
-  box-shadow: 0px 2px 5px 5px rgba(0, 0, 0, 0.75);
+  box-shadow: 0px 2px 5px 3px rgba(34, 63, 151, 0.8);
 }
 .alert:hover {
-  box-shadow: 0px 2px 5px 5px rgba(0, 0, 0, 0.2);
+  box-shadow: 0px 2px 5px 5px rgba(34, 63, 151, 0.2);
 }
 .alert__button {
   background-color: #223f97;
@@ -81,7 +82,7 @@ body {
 }
 
 .result {
-  background: rgba(255, 255, 255, 0.8);
+  background: rgba(34, 63, 151, 0.9);
   position: absolute;
   top: 0;
   right: 0;
@@ -97,6 +98,9 @@ body {
   font-weight: 900;
   font-size: 3rem;
   color: rgb(222, 8, 8);
+  background-color: rgba(0, 0, 0, 0.4);
+  box-shadow: 0px 2px 5px 2px rgba(19, 35, 84, 0.9);
+  border-radius: 10px;
   margin-top: 2rem;
   padding: 1em 2em;
 }
@@ -108,11 +112,32 @@ body {
   margin-top: 2rem;
   padding: 1em 2em;
   background-color: #223f97;
+  border: 1px solid white;
   color: white;
+}
+.result__play-again:hover {
+  background-color: white;
+  border: 1px solid #223f97;
+  color: #223f97;
 }
 .result__game-over {
   font-family: "Luckiest Guy", cursive;
   letter-spacing: 5px;
   font-size: 4.5rem;
-  color: rgb(222, 8, 8);
+  color: whitesmoke;
+}
+
+.score {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  background-color: #2e57d0;
+  color: whitesmoke;
+  margin: 0 auto;
+  padding: 1em;
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+.score__display {
+  padding: 0.5em 0;
 }/*# sourceMappingURL=style.css.map */
