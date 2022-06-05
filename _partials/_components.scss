@@ -1,5 +1,5 @@
 .alert {
-  display: none;
+  display: flex;
   flex-direction: row;
   position: absolute;
   background-color: white;
@@ -7,11 +7,11 @@
   border-radius: 5px;
   justify-content: center;
   align-items: center;
-  top: 25%;
-  right: 10%;
-  left: 10%;
-  bottom: 60%;
-  padding: 3em;
+  top: 40%;
+  right: 25%;
+  left: 25%;
+  bottom: 40%;
+  padding: 2em;
   box-shadow: 0px 2px 5px 3px rgba($color: #223f97, $alpha: 0.8);
 
   &:hover {
