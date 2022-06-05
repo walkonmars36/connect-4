@@ -19,7 +19,9 @@ let yellowScore = 0;
 
 const loadPage = () => {
   createGameBoard();
-  scoreDiv.style.display = "none";
+  scoreDiv.style.display = "flex";
+  scoreRed.innerText = redScore;
+  scoreYellow.innerText = yellowScore;
 };
 
 const playAgain = () => {
@@ -93,7 +95,7 @@ const checkForWin = () => {
       resultWinner.innerText = "Red Wins 🎉";
       redScore++;
       scoreRed.innerText = redScore;
-      scoreDiv.style.display = "none";
+
       resultWinner.style.color = "red";
       playAgainBtn.innerText = "PLAY AGAIN";
     }
@@ -107,7 +109,7 @@ const checkForWin = () => {
       resultWinner.innerText = "Yellow Wins 🎉";
       yellowScore++;
       scoreYellow.innerText = yellowScore;
-      scoreDiv.style.display = "none";
+
       resultWinner.style.color = "yellow";
       playAgainBtn.innerText = "PLAY AGAIN";
     }

@@ -3,9 +3,9 @@
   background-color: #2e57d0;
   display: grid;
   grid-template-columns: repeat(7, 1fr);
-
   gap: 0.5rem;
   padding: 1em;
+  margin-top: 3rem;
 
   &__cell {
     width: 3em;

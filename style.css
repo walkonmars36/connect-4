@@ -49,6 +49,7 @@ body {
   grid-template-columns: repeat(7, 1fr);
   gap: 0.5rem;
   padding: 1em;
+  margin-top: 3rem;
 }
 .div-container__cell {
   width: 3em;
