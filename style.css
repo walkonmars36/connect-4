@@ -22,13 +22,10 @@ body {
 
 .page-container {
   position: relative;
-  display: flex;
-  justify-content: center;
-  align-items: flex-start;
   margin: auto;
   width: 90%;
-  height: 60vh;
-  max-width: 60rem;
+  max-width: 45rem;
+  margin: 3rem auto;
 }
 
 .game-container {
@@ -42,7 +39,6 @@ body {
   box-shadow: 0px 2px 10px 5px rgba(19, 35, 84, 0.5);
 }
 .game-container__cell {
-  width: 3em;
   aspect-ratio: 1/1;
   background-color: white;
   border: 5px solid #223f97;
@@ -87,7 +83,6 @@ body {
 
 .result {
   background: rgba(34, 63, 151, 0.98);
-  border-radius: 10px;
   position: absolute;
   top: 0;
   right: 0;
@@ -134,7 +129,7 @@ body {
   display: flex;
   justify-content: space-evenly;
   align-items: center;
-  background-color: rgba(34, 63, 151, 0.98);
+  background-color: rgba(189, 30, 30, 0.98);
   color: whitesmoke;
   margin: 0 auto;
   padding: 2em;
