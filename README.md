@@ -2,11 +2,11 @@
 
 ## Technology Consultancy 12 week programme at \_Nology.io.
 
-### Week 4 project
+### Week 4 project - Connect 4
 
 Build a working game using vanilla Javascript, SCSS and BEM.
 
-The game is working, but I would like to implement:-
+The game is functioning, but I would like to implement the following:
 
 #### Next steps :
 

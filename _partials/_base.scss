@@ -1,8 +1,6 @@
 @use "./variables" as *;
 
 body {
-  height: 100vh;
-  // font-family: $primary-font;
   background-color: #274298;
   background-image: linear-gradient(343deg, #274298 0%, #9bc1bc 73%, #ffffff 100%);
 }
@@ -11,4 +9,8 @@ h3,
 p {
   font-family: $primary-font;
   color: $font-color-grey;
+}
+
+h3 {
+  font-size: 1.5rem;
 }
