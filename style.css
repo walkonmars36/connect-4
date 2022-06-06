@@ -15,9 +15,14 @@ button {
 
 body {
   height: 100vh;
-  font-family: "Roboto", sans-serif;
   background-color: #274298;
   background-image: linear-gradient(343deg, #274298 0%, #9bc1bc 73%, #ffffff 100%);
+}
+
+h3,
+p {
+  font-family: "Roboto", sans-serif;
+  color: #2b2b2b;
 }
 
 .page-container {
@@ -45,40 +50,10 @@ body {
   border-radius: 50%;
 }
 .game-container__cell--player-red {
-  background-color: red;
+  background-color: rgb(222, 8, 8);
 }
 .game-container__cell--player-yellow {
   background-color: yellow;
-}
-
-.alert-box {
-  display: none;
-  position: absolute;
-  background-color: white;
-  border: 1px solid #223f97;
-  border-radius: 5px;
-  justify-content: space-around;
-  align-items: center;
-  top: 20%;
-  right: 25%;
-  left: 25%;
-  bottom: 60%;
-  padding: 1em;
-  box-shadow: 0px 2px 5px 3px rgba(34, 63, 151, 0.8);
-}
-.alert-box:hover {
-  box-shadow: 0px 2px 5px 5px rgba(34, 63, 151, 0.2);
-}
-.alert-box__button {
-  background-color: #223f97;
-  color: white;
-  padding: 1em 2em;
-  border: 1px solid #223f97;
-  border-radius: 10px;
-}
-.alert-box__button:hover {
-  color: #223f97;
-  background-color: white;
 }
 
 .result {
@@ -145,4 +120,34 @@ body {
   justify-content: center;
   align-items: center;
   margin-top: 3rem;
+}
+
+.alert-box {
+  display: none;
+  position: absolute;
+  background-color: white;
+  border: 1px solid #223f97;
+  border-radius: 5px;
+  justify-content: space-evenly;
+  align-items: center;
+  top: 20%;
+  right: 15%;
+  left: 15%;
+  bottom: 60%;
+  padding: 1em;
+  box-shadow: 0px 2px 5px 3px rgba(34, 63, 151, 0.8);
+}
+.alert-box:hover {
+  box-shadow: 0px 2px 5px 5px rgba(34, 63, 151, 0.2);
+}
+.alert-box__button {
+  background-color: #223f97;
+  color: white;
+  padding: 1em 2em;
+  border: 1px solid #223f97;
+  border-radius: 10px;
+}
+.alert-box__button:hover {
+  color: #223f97;
+  background-color: white;
 }/*# sourceMappingURL=style.css.map */

@@ -2,8 +2,8 @@
   display: flex;
   justify-content: space-evenly;
   align-items: center;
-  background-color: rgba($color: #bd1e1e, $alpha: 0.98);
-  color: whitesmoke;
+  background-color: rgba($color: $color-red, $alpha: 0.98);
+  color: $color-whitesmoke;
   margin: 0 auto;
   padding: 2em;
   font-size: 1.5rem;

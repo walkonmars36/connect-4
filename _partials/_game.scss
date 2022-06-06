@@ -1,25 +1,27 @@
+@use "../_partials/variables" as *;
+
 .game-container {
-  border: 5px solid navy;
-  background-color: #2e57d0;
+  border: 5px solid $color-dark-blue;
+  background-color: $color-board-blue;
   display: grid;
   grid-template-columns: repeat(7, 1fr);
   gap: 0.5rem;
   padding: 1em;
   margin-top: 3rem;
-  box-shadow: 0px 2px 10px 5px rgba($color: #132354, $alpha: 0.5);
+  box-shadow: 0px 2px 10px 5px rgba($color: $color-box-shadow, $alpha: 0.5);
 
   &__cell {
     aspect-ratio: 1/1;
-    background-color: white;
-    border: 5px solid #223f97;
+    background-color: $color-white;
+    border: 5px solid $color-blue;
     border-radius: 50%;
 
     &--player-red {
-      background-color: red;
+      background-color: $color-red;
     }
 
     &--player-yellow {
-      background-color: yellow;
+      background-color: $color-yellow;
     }
   }
 }
