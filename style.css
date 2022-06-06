@@ -28,7 +28,9 @@ p {
 .page-container {
   position: relative;
   margin: auto;
+  margin-bottom: 5rem;
   width: 90%;
+  min-height: 80vh;
   max-width: 45rem;
   margin: 3rem auto;
 }
@@ -104,7 +106,7 @@ p {
   display: flex;
   justify-content: space-evenly;
   align-items: center;
-  background-color: rgba(189, 30, 30, 0.98);
+  background-color: rgba(222, 8, 8, 0.98);
   color: whitesmoke;
   margin: 0 auto;
   padding: 2em;
